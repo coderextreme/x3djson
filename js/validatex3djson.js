@@ -10,12 +10,13 @@ ajv.addSchema(XMLSchemaJsonSchema, 'http://www.jsonix.org/jsonschemas/w3c/2001/X
 ajv.addSchema(JsonixJsonSchema, 'http://www.jsonix.org/jsonschemas/jsonix/Jsonix.jsonschema');
 var validate = ajv.compile(X3dJsonSchema);
 
-var hello = JSON.parse(fs.readFileSync("../../www.web3d.org/x3d/content/examples/X3dForWebAuthors/HelloWorld.json").toString());
+var hello = JSON.parse(fs.readFileSync("./HelloWorld.json").toString());
 
 var valid = validate(hello);
 if (!valid) {
     console.log('Validation failed.');
     console.log('Validation errors:');
     console.log(validate.errors);
+} else {
+    console.log('Valid');
 }
-
