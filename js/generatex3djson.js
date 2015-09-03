@@ -4,5 +4,5 @@ var unmarshaller = context.createUnmarshaller();
 
 unmarshaller.unmarshalURL('HelloWorld.x3d',
     function (unmarshalled) {
-        document.write(JSON.stringify(unmarshalled, null, 2));
+        document.write(JSON.stringify(unmarshalled, null, "  "));
     });

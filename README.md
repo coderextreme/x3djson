@@ -24,3 +24,9 @@ npm run app
 ```
 npm run validate
 ```
+
+### pretty print JSON file
+
+```
+node js/prettyprint.js "file.json"
+```
