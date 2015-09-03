@@ -3,6 +3,16 @@ X3D JSON Schema validation and conversion
 
 * X3DJSON (X3D JSON Schema utilities) is a Node and JavaScript package for converting X3D XML schema to JSON schema and for validating JSON files with that schema
 
+
+### Requirements
+
+* wget
+* maven 3 (mvn)
+* node
+* npm
+* java 8
+* git
+
 ### Build
 
 ```
