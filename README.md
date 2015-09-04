@@ -7,11 +7,9 @@ X3D JSON Schema validation and conversion
 ### Requirements
 
 * wget
-* maven 3 (mvn)
 * node
 * npm
-* java 8
-* git
+* java 8 [ for JSON schema generation only ]
 
 ### Build
 
