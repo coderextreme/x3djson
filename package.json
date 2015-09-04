@@ -1,23 +1,25 @@
 {
-	"name": "x3djson",
-	"description": "X3dJSON schema convert and validate",
-	"engines": [
-		"node >= 0.8.0"
-	],
-	"main": "x3djson.js",
-	"dependencies": {
-		"jsonix": ">=2.3.0",
-		"jsonix-schema-compiler": ">=2.3.6",
-		"ajv": ">=1.2.1",
-		"express": "~4.9.0",
-                "amdefine" : ">=0.1.x",
-                "xmldom" : "0.x.x",
-                "xmlhttprequest" : "1.x.x"
-	},
-	"scripts": {
-		"postinstall" : "wget http://www.web3d.org/x3d/content/examples/HelloWorld.x3d; wget http://www.web3d.org/specifications/x3d-3.4.xsd ; wget http://www.web3d.org/specifications/x3d-3.4-Web3dExtensionsPublic.xsd ; wget http://www.web3d.org/specifications/x3d-3.4-Web3dExtensionsPrivate.xsd; java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -generateJsonSchema -compact -logLevel TRACE -d mappings x3d-3.4.xsd -p x3djson -b bindings.xjb; wget http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema; wget http://www.jsonix.org/jsonschemas/jsonix/Jsonix.jsonschema; wget https://github.com/jrburke/amdefine/raw/latest/amdefine.js; git clone https://github.com/highsource/jsonix; cd jsonix; mvn install",
-		"app" : "node app.js",
-		"validate" : "node js/validatex3djson.js",
-		"print" : "node js/prettyprint.js HelloWorld.json"
-	}
+  "name": "x3djson",
+  "description": "X3dJSON schema convert and validate",
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "main": "x3djson.js",
+  "dependencies": {
+    "ajv": ">=1.2.1",
+    "amdefine": ">=0.1.x",
+    "express": "~4.9.0",
+    "json-schema-to-mongoose": "^0.2.2",
+    "jsonix": ">=2.3.0",
+    "jsonix-schema-compiler": ">=2.3.6",
+    "mongoose": "^4.1.5",
+    "xmldom": "0.x.x",
+    "xmlhttprequest": "1.x.x"
+  },
+  "scripts": {
+    "postinstall": "wget http://www.web3d.org/x3d/content/examples/HelloWorld.x3d; wget http://www.web3d.org/specifications/x3d-3.4.xsd ; wget http://www.web3d.org/specifications/x3d-3.4-Web3dExtensionsPublic.xsd ; wget http://www.web3d.org/specifications/x3d-3.4-Web3dExtensionsPrivate.xsd; java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -generateJsonSchema -compact -logLevel TRACE -d mappings x3d-3.4.xsd -p x3djson -b bindings.xjb; wget http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema; wget http://www.jsonix.org/jsonschemas/jsonix/Jsonix.jsonschema; wget https://github.com/jrburke/amdefine/raw/latest/amdefine.js; git clone https://github.com/highsource/jsonix; cd jsonix; mvn install",
+    "app": "node app.js",
+    "validate": "node js/validatex3djson.js",
+    "print": "node js/prettyprint.js HelloWorld.json"
+  }
 }
