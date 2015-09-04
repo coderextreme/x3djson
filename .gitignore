@@ -1,0 +1,10 @@
+HelloWorld.x3d
+Jsonix.jsonschema
+XMLSchema.jsonschema
+amdefine.js
+jsonix/
+mappings/
+node_modules/
+x3d-3.4-Web3dExtensionsPrivate.xsd
+x3d-3.4-Web3dExtensionsPublic.xsd
+x3d-3.4.xsd
