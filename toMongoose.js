@@ -51765,8 +51765,10 @@ var myX3dSchema =
     ]
 }
 
-var mongooseSchema = createMongooseSchema(refs, myX3dSchema)
+var mongooseSchema = createMongooseSchema(/*refs*/null, myX3dSchema);
 
-console.log(util.inspect(mongooseSchema, false, null))
+console.log(util.inspect(mongooseSchema, false, null));
 
-var Schema = new mongoose.Schema(mongooseSchema)
+var x3dSchema = new mongoose.Schema(mongooseSchema);
+
+module.exports = x3dSchema;
