@@ -43,8 +43,5 @@ node js/prettyprint.js "file.json"
 ### generate JSON from X3D
 
 ```
-npm run gen
-```
-```
 node js/genJSON.js "file.x3d"
 ```
