@@ -19,7 +19,7 @@ npm install
 
 mvn may exit with a 1 error code.  Never fear, we just require the jsonix/dist/Jsonix-all.js to be built.
 
-* Schema can be found in mappings/x3djson.schema
+* Schema can be found in mappings/x3djson.jsonschema
 
 ### Run node server
 
@@ -39,4 +39,11 @@ npm run validate
 
 ```
 node js/prettyprint.js "file.json"
+```
+
+
+### generate JSON from X3D
+
+```
+npm run gen
 ```
