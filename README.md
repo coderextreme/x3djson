@@ -45,3 +45,6 @@ node js/prettyprint.js "file.json"
 ```
 npm run gen
 ```
+```
+node js/genJSON.js "file.x3d"
+```
