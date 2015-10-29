@@ -11,7 +11,7 @@ function convertToJSON(file) {
 	    function (unmarshalled) {
 		var x3d = file.lastIndexOf(".x3d");
 	        if (x3d >= 0) {
-			var jsfile = file.substr(0, x3d)+".json2";
+			var jsfile = file.substr(0, x3d)+".output.json";
 			console.log(jsfile);
 			fs.writeFile(jsfile, JSON.stringify(unmarshalled, null, "  "));
 		}

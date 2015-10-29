@@ -19,7 +19,7 @@
   },
   "scripts": {
     "get": "wget http://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Dodecahedron.x3d; wget http://x3dgraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategies.x3d; wget http://www.web3d.org/x3d/content/examples/HelloWorld.x3d; wget http://www.web3d.org/specifications/x3d-3.4.xsd ; wget http://www.web3d.org/specifications/x3d-3.4-Web3dExtensionsPublic.xsd ; wget http://www.web3d.org/specifications/x3d-3.4-Web3dExtensionsPrivate.xsd; java -jar node_modules/jsonix/lib/jsonix-schema-compiler-full.jar -generateJsonSchema -compact -logLevel TRACE -d mappings x3d-3.4.xsd -p x3djson -b bindings.xjb; wget http://www.jsonix.org/jsonschemas/w3c/2001/XMLSchema.jsonschema; wget http://www.jsonix.org/jsonschemas/jsonix/Jsonix.jsonschema",
-    "gen": "node js/genJSON.js Dodecahedron.x3d ObliqueStrategies.x3d HelloWorld.x3d; node js/marshal.js Dodecahedron.json2 ObliqueStrategies.json2 HelloWorld.json2",
+    "gen": "node js/genJSON.js Dodecahedron.x3d ObliqueStrategies.x3d HelloWorld.x3d Box.x3d; node js/marshal.js Dodecahedron.output.json ObliqueStrategies.output.json HelloWorld.output.json Box.output.json",
     "app": "node app.js",
     "validate": "node js/validatex3djson.js",
     "print": "node js/prettyprint.js HelloWorld.json"
