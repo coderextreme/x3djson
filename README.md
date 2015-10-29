@@ -39,9 +39,15 @@ npm run validate
 node js/prettyprint.js "file.json"
 ```
 
+### redownload and regenerate mappings
+
+```
+npm run get
+```
 
 ### generate JSON from X3D
 
 ```
 node js/genJSON.js "file.x3d"
+npm run gen
 ```
