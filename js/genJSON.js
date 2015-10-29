@@ -7,7 +7,8 @@ var context = new Jsonix.Context([x3djson]);
 var unmarshaller = context.createUnmarshaller();
 
 function convertToJSON(file) {
-	unmarshaller.unmarshalFile(file,
+	try {
+	  unmarshaller.unmarshalFile(file,
 	    function (unmarshalled) {
 		var x3d = file.lastIndexOf(".x3d");
 	        if (x3d >= 0) {
@@ -16,6 +17,9 @@ function convertToJSON(file) {
 			fs.writeFile(jsfile, JSON.stringify(unmarshalled, null, "  "));
 		}
 	    });
+	} catch (e) {
+		console.error(e);
+	}
 }
 
 for (i in process.argv) {
@@ -23,9 +27,5 @@ for (i in process.argv) {
 		continue;
 	}
 	var file = process.argv[i];
-	try {
-		convertToJSON(file);
-	} catch (e) {
-		console.error(e);
-	}
+	convertToJSON(file);
 }
