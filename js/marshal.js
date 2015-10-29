@@ -18,6 +18,7 @@ function convertToX3D(file) {
 	var dot = file.lastIndexOf(".json");
 	if (dot >= 0) {
 		var xmlfile = file.substr(0, dot)+".x3d2";
+		console.log(xmlfile);
 		fs.writeFile(xmlfile, xml);
 	}
 }
