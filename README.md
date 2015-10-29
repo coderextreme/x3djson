@@ -17,7 +17,7 @@ X3D JSON Schema validation and conversion
 npm install
 ```
 
-* Schema can be found in mappings/x3djson.jsonschema
+* JSON Schema can be found in mappings/x3djson.jsonschema
 
 ### Run node server
 
@@ -25,7 +25,7 @@ npm install
 npm run app
 ```
 
-* Go to localhost:3000 to see converted file
+* Go to localhost:3000 to see files you can load.  Don't forget to create a symbolic link from www.web3d.org/x3d/content/examples to examples
 
 ### Validate HelloWorld.json
 
