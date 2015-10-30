@@ -1,0 +1,262 @@
+{
+  "name": {
+    "namespaceURI": "",
+    "localPart": "X3D",
+    "prefix": "",
+    "key": "X3D",
+    "string": "X3D"
+  },
+  "value": {
+    "TYPE_NAME": "x3djson.X3D",
+    "profile": "Immersive",
+    "version": "3.3",
+    "head": {
+      "TYPE_NAME": "x3djson.Head",
+      "meta": [
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.x3d",
+          "name": "title"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "Simple X3D scene example: Hello World!",
+          "name": "description"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "30 October 2000",
+          "name": "created"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "14 October 2015",
+          "name": "modified"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "Don Brutzman",
+          "name": "creator"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.tall.png",
+          "name": "Image"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://en.wikipedia.org/wiki/Hello_world",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "https://en.wikipedia.org/wiki/Hello#.22Hello.2C_World.22_computer_program",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "https://en.wikipedia.org/wiki/\"Hello,_World!\"_program",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://www.HelloWorldExample.net",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://www.web3D.org",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://www.web3d.org/realtime-3d/news/internationalization-x3d",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://www.web3d.org/x3d/content/examples/HelloWorld.x3d",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://X3dGraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01-TechnicalOverview/HelloWorld.x3d",
+          "name": "identifier"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "http://www.web3d.org/x3d/content/examples/license.html",
+          "name": "license"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit",
+          "name": "generator"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.wrl",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.x3dv",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.x3db",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.xhtml",
+          "name": "reference"
+        },
+        {
+          "TYPE_NAME": "x3djson.Meta",
+          "content": "HelloWorld.json",
+          "name": "reference"
+        }
+      ]
+    },
+    "scene": {
+      "TYPE_NAME": "x3djson.Scene",
+      "metadataBooleanOrMetadataDoubleOrMetadataFloat": [
+        {
+          "TYPE_NAME": "x3djson.WorldInfo",
+          "title": "Hello world!"
+        },
+        {
+          "TYPE_NAME": "x3djson.Group",
+          "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
+            {
+              "TYPE_NAME": "x3djson.Viewpoint",
+              "def": "ViewUpClose",
+              "centerOfRotation": "0 -1 0",
+              "description": "Hello world!",
+              "position": "0 -1 7"
+            },
+            {
+              "TYPE_NAME": "x3djson.Transform",
+              "rotation": "0 1 0 3",
+              "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
+                {
+                  "TYPE_NAME": "x3djson.Shape",
+                  "rest": [
+                    {
+                      "name": {
+                        "namespaceURI": "",
+                        "localPart": "Sphere",
+                        "prefix": "",
+                        "key": "Sphere",
+                        "string": "Sphere"
+                      },
+                      "value": {
+                        "TYPE_NAME": "x3djson.Sphere"
+                      }
+                    },
+                    {
+                      "name": {
+                        "namespaceURI": "",
+                        "localPart": "Appearance",
+                        "prefix": "",
+                        "key": "Appearance",
+                        "string": "Appearance"
+                      },
+                      "value": {
+                        "TYPE_NAME": "x3djson.Appearance",
+                        "appearanceChildContentModel": [
+                          {
+                            "TYPE_NAME": "x3djson.Material",
+                            "def": "MaterialLightBlue",
+                            "diffuseColor": "0.1 0.5 1"
+                          },
+                          {
+                            "TYPE_NAME": "x3djson.ImageTexture",
+                            "def": "ImageCloudlessEarth",
+                            "url": [
+                              "\"earth-topo.png\"",
+                              "\"earth-topo.jpg\"",
+                              "\"earth-topo-small.gif\"",
+                              "\"http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png\"",
+                              "\"http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg\"",
+                              "\"http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif\""
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "TYPE_NAME": "x3djson.Transform",
+              "translation": "0 -2 0",
+              "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
+                {
+                  "TYPE_NAME": "x3djson.Shape",
+                  "rest": [
+                    {
+                      "name": {
+                        "namespaceURI": "",
+                        "localPart": "Text",
+                        "prefix": "",
+                        "key": "Text",
+                        "string": "Text"
+                      },
+                      "value": {
+                        "TYPE_NAME": "x3djson.Text",
+                        "def": "TextMessage",
+                        "string": [
+                          "\"Hello\"",
+                          "\"world!\""
+                        ],
+                        "fontStyle": {
+                          "TYPE_NAME": "x3djson.FontStyle",
+                          "justify": [
+                            "\"MIDDLE\"",
+                            "\"MIDDLE\""
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "namespaceURI": "",
+                        "localPart": "Appearance",
+                        "prefix": "",
+                        "key": "Appearance",
+                        "string": "Appearance"
+                      },
+                      "value": {
+                        "TYPE_NAME": "x3djson.Appearance",
+                        "appearanceChildContentModel": [
+                          {
+                            "TYPE_NAME": "x3djson.Material",
+                            "use": "MaterialLightBlue"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
