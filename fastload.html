@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>JSON Loader</title>
+    <link rel="stylesheet" type="text/css" 
+          href="http://www.x3dom.org/x3dom/release/x3dom.css">
+    </link>
+    <script type="text/javascript" 
+            src="http://www.x3dom.org/x3dom/release/x3dom-full.js">
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="node_modules/jsonix/jsonix.js"></script>
+    <script src="mappings/x3djson.js"></script>
+</head>
+<body>
+</body>
+    <script type="text/javascript" src="js/fastload.js">
+// load JSON to XML without having own parser
+
+var context = new Jsonix.Context([x3djson]);
+
+var marshaller = context.createMarshaller();
+
+function loadURL(selector, url) {
+	var element = document.querySelector(selector);
+	if (element === null) {
+		console.log("body not found document");
+	} else {
+
+		$.getJSON(url, function(json) {
+			var xml = marshaller.marshalString(json);
+			console.log(xml);
+			$(element).append(xml);
+			x3dom.reload();
+		})
+		.fail(function(jqXHR, textStatus, errorThrown) { alert('getJSON request failed! ' + textStatus + ' ' + errorThrown); });
+	}
+};
+    </script>
+    <script type="text/javascript">
+	loadURL('body', 'Dodecahedron.output.json');
+    </script>
+</html>
