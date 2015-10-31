@@ -1,0 +1,4 @@
+#!/bin/bash
+export MVN_REPO=/Users/johncarlson/.m2/repository
+export CLASSPATH=$MVN_REPO/relaxngDatatype/relaxngDatatype/20020414/relaxngDatatype-20020414.jar:$MVN_REPO/com/sun/xml/bind/jaxb/isorelax/20090621/isorelax-20090621.jar:$MVN_REPO/net/java/dev/msv/xsdlib/2013.6.2-SNAPSHOT/xsdlib-2013.6.2-SNAPSHOT.jar:$MVN_REPO/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar:$MVN_REPO/net/java/dev/msv/msv-core/2013.6.2-SNAPSHOT/msv-core-2013.6.2-SNAPSHOT.jar:$MVN_REPO/net/java/dev/msv/msv-rngconverter/2013.6.2-SNAPSHOT/msv-rngconverter-2013.6.2-SNAPSHOT.jar
+java -cp $CLASSPATH com.sun.msv.writer.relaxng.Driver x3d-3.4.xsd > x3d-3.4.rng

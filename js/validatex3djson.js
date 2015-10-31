@@ -10,7 +10,7 @@ ajv.addSchema(XMLSchemaJsonSchema, 'http://www.jsonix.org/jsonschemas/w3c/2001/X
 ajv.addSchema(JsonixJsonSchema, 'http://www.jsonix.org/jsonschemas/jsonix/Jsonix.jsonschema');
 var validate = ajv.compile(X3dJsonSchema);
 
-var hello = JSON.parse(fs.readFileSync("./HelloWorld.json").toString());
+var hello = JSON.parse(fs.readFileSync("./Dodecahedron.output.json").toString());
 
 var valid = validate(hello);
 if (!valid) {
