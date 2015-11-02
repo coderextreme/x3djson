@@ -143,13 +143,26 @@
             {
               "TYPE_NAME": "x3djson.Viewpoint",
               "def": "ViewUpClose",
-              "centerOfRotation": "0 -1 0",
+              "centerOfRotation": [
+                0,
+                -1,
+                0
+              ],
               "description": "Hello world!",
-              "position": "0 -1 7"
+              "position": [
+                0,
+                -1,
+                7
+              ]
             },
             {
               "TYPE_NAME": "x3djson.Transform",
-              "rotation": "0 1 0 3",
+              "rotation": [
+                0,
+                1,
+                0,
+                3
+              ],
               "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                 {
                   "TYPE_NAME": "x3djson.Shape",
@@ -180,7 +193,11 @@
                           {
                             "TYPE_NAME": "x3djson.Material",
                             "def": "MaterialLightBlue",
-                            "diffuseColor": "0.1 0.5 1"
+                            "diffuseColor": [
+                              0.1,
+                              0.5,
+                              1
+                            ]
                           },
                           {
                             "TYPE_NAME": "x3djson.ImageTexture",
@@ -203,7 +220,11 @@
             },
             {
               "TYPE_NAME": "x3djson.Transform",
-              "translation": "0 -2 0",
+              "translation": [
+                0,
+                -2,
+                0
+              ],
               "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                 {
                   "TYPE_NAME": "x3djson.Shape",

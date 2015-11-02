@@ -80,13 +80,26 @@
       "metadataBooleanOrMetadataDoubleOrMetadataFloat": [
         {
           "TYPE_NAME": "x3djson.Background",
-          "skyColor": "1 1 1"
+          "skyColor": [
+            1,
+            1,
+            1
+          ]
         },
         {
           "TYPE_NAME": "x3djson.Viewpoint",
           "description": "Book View",
-          "orientation": "-0.747 -0.624 -0.231 1.05",
-          "position": "-1.81 3.12 2.59"
+          "orientation": [
+            -0.747,
+            -0.624,
+            -0.231,
+            1.05
+          ],
+          "position": [
+            -1.81,
+            3.12,
+            2.59
+          ]
         },
         {
           "TYPE_NAME": "x3djson.Shape",
@@ -101,7 +114,11 @@
               },
               "value": {
                 "TYPE_NAME": "x3djson.Box",
-                "size": "1 2 3"
+                "size": [
+                  1,
+                  2,
+                  3
+                ]
               }
             },
             {

@@ -156,12 +156,24 @@
         },
         {
           "TYPE_NAME": "x3djson.Background",
-          "skyColor": "0.419608 0.427451 1"
+          "skyColor": [
+            0.419608,
+            0.427451,
+            1
+          ]
         },
         {
           "TYPE_NAME": "x3djson.Transform",
-          "scale": "0.4 0.4 0.4",
-          "translation": "0 1 0",
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "translation": [
+            0,
+            1,
+            0
+          ],
           "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
             {
               "TYPE_NAME": "x3djson.TouchSensor",
@@ -225,7 +237,11 @@
                     "appearanceChildContentModel": [
                       {
                         "TYPE_NAME": "x3djson.Material",
-                        "diffuseColor": "1 1 1"
+                        "diffuseColor": [
+                          1,
+                          1,
+                          1
+                        ]
                       }
                     ]
                   }
@@ -234,7 +250,11 @@
             },
             {
               "TYPE_NAME": "x3djson.Transform",
-              "scale": "10 3 1",
+              "scale": [
+                10,
+                3,
+                1
+              ],
               "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                 {
                   "TYPE_NAME": "x3djson.Shape",
@@ -250,12 +270,31 @@
                       },
                       "value": {
                         "TYPE_NAME": "x3djson.IndexedFaceSet",
-                        "coordIndex": "0 1 2 3 -1",
+                        "coordIndex": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          -1
+                        ],
                         "solid": false,
                         "composedGeometryContentModel": [
                           {
                             "TYPE_NAME": "x3djson.Coordinate",
-                            "point": "1 1 0 1 -1 0 -1 -1 0 -1 1 0"
+                            "point": [
+                              1,
+                              1,
+                              0,
+                              1,
+                              -1,
+                              0,
+                              -1,
+                              -1,
+                              0,
+                              -1,
+                              1,
+                              0
+                            ]
                           }
                         ]
                       }
@@ -274,9 +313,17 @@
                           {
                             "TYPE_NAME": "x3djson.Material",
                             "ambientIntensity": 0.245763,
-                            "diffuseColor": "0.34773 0.090909 0.005289",
+                            "diffuseColor": [
+                              0.34773,
+                              0.090909,
+                              0.005289
+                            ],
                             "shininess": 0.07,
-                            "specularColor": "0.336735 0.051091 0.051091",
+                            "specularColor": [
+                              0.336735,
+                              0.051091,
+                              0.051091
+                            ],
                             "transparency": 0.8
                           }
                         ]
@@ -428,8 +475,16 @@
         {
           "TYPE_NAME": "x3djson.Transform",
           "def": "CardTransform",
-          "scale": "0.4 0.4 0.4",
-          "translation": "0 -1.5 0",
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "translation": [
+            0,
+            -1.5,
+            0
+          ],
           "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
             {
               "TYPE_NAME": "x3djson.Shape",
@@ -471,7 +526,11 @@
                     "appearanceChildContentModel": [
                       {
                         "TYPE_NAME": "x3djson.Material",
-                        "diffuseColor": "1 1 1"
+                        "diffuseColor": [
+                          1,
+                          1,
+                          1
+                        ]
                       }
                     ]
                   }
@@ -521,8 +580,16 @@
         },
         {
           "TYPE_NAME": "x3djson.Transform",
-          "scale": "0.4 0.4 0.4",
-          "translation": "-3.2 2.5 0",
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "translation": [
+            -3.2,
+            2.5,
+            0
+          ],
           "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
             {
               "TYPE_NAME": "x3djson.TouchSensor",
@@ -572,7 +639,11 @@
                     "appearanceChildContentModel": [
                       {
                         "TYPE_NAME": "x3djson.Material",
-                        "diffuseColor": "1 0 0.6"
+                        "diffuseColor": [
+                          1,
+                          0,
+                          0.6
+                        ]
                       }
                     ]
                   }
@@ -581,7 +652,11 @@
             },
             {
               "TYPE_NAME": "x3djson.Transform",
-              "scale": "2 0.6 1",
+              "scale": [
+                2,
+                0.6,
+                1
+              ],
               "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                 {
                   "TYPE_NAME": "x3djson.Shape",
@@ -597,12 +672,31 @@
                       },
                       "value": {
                         "TYPE_NAME": "x3djson.IndexedFaceSet",
-                        "coordIndex": "0 1 2 3 -1",
+                        "coordIndex": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          -1
+                        ],
                         "solid": false,
                         "composedGeometryContentModel": [
                           {
                             "TYPE_NAME": "x3djson.Coordinate",
-                            "point": "1 1 0 1 -1 0 -1 -1 0 -1 1 0"
+                            "point": [
+                              1,
+                              1,
+                              0,
+                              1,
+                              -1,
+                              0,
+                              -1,
+                              -1,
+                              0,
+                              -1,
+                              1,
+                              0
+                            ]
                           }
                         ]
                       }
@@ -633,8 +727,16 @@
         },
         {
           "TYPE_NAME": "x3djson.Transform",
-          "scale": "0.4 0.4 0.4",
-          "translation": "3.5 2.5 0",
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "translation": [
+            3.5,
+            2.5,
+            0
+          ],
           "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
             {
               "TYPE_NAME": "x3djson.TouchSensor",
@@ -687,7 +789,11 @@
             },
             {
               "TYPE_NAME": "x3djson.Transform",
-              "scale": "1.2 0.6 1",
+              "scale": [
+                1.2,
+                0.6,
+                1
+              ],
               "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                 {
                   "TYPE_NAME": "x3djson.Shape",
@@ -699,8 +805,16 @@
         },
         {
           "TYPE_NAME": "x3djson.Transform",
-          "scale": "0.4 0.4 0.4",
-          "translation": "-3.3 -0.5 0",
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "translation": [
+            -3.3,
+            -0.5,
+            0
+          ],
           "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
             {
               "TYPE_NAME": "x3djson.TouchSensor",
@@ -752,7 +866,11 @@
             },
             {
               "TYPE_NAME": "x3djson.Transform",
-              "scale": "1.8 0.6 1",
+              "scale": [
+                1.8,
+                0.6,
+                1
+              ],
               "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                 {
                   "TYPE_NAME": "x3djson.Shape",
@@ -764,8 +882,16 @@
         },
         {
           "TYPE_NAME": "x3djson.Transform",
-          "scale": "0.4 0.4 0.4",
-          "translation": "3.3 -0.5 0",
+          "scale": [
+            0.4,
+            0.4,
+            0.4
+          ],
+          "translation": [
+            3.3,
+            -0.5,
+            0
+          ],
           "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
             {
               "TYPE_NAME": "x3djson.Anchor",
@@ -824,7 +950,11 @@
                 },
                 {
                   "TYPE_NAME": "x3djson.Transform",
-                  "scale": "1.8 0.6 1",
+                  "scale": [
+                    1.8,
+                    0.6,
+                    1
+                  ],
                   "backgroundOrColorInterpolatorOrCoordinateInterpolator": [
                     {
                       "TYPE_NAME": "x3djson.Shape",
