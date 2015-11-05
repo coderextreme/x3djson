@@ -1,0 +1,89 @@
+{
+	"id": "X3DFogObject.json",
+	"type": "object",
+	"required": [],
+	"properties": {
+		"color": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"fogType": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"visibilityRange": {
+			"oneOf": [
+				{"$ref": "#/definitions/visibilityRange"},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/visibilityRange"},
+					"minItems": 0
+				}
+			]
+		}
+	},
+	"definitions": {
+		"array": {
+			"type": "array",
+			"items": {"$ref": "#"}
+		},
+		"possibleRef": {
+			"oneOf": [
+				{"$ref": "#"},
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				}
+			]
+		},
+		"possibleRefArray": {
+			"oneOf": [
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/possibleRef"}
+				}
+			]
+		},
+		"color": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"fogType": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"visibilityRange": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		}
+	},
+	"format": "X3DFogObject",
+	"media": {"type": "application/json;profile=X3DFogObject"}
+}

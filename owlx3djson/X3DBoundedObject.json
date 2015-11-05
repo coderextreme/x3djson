@@ -1,0 +1,74 @@
+{
+	"id": "X3DBoundedObject.json",
+	"type": "object",
+	"required": [],
+	"properties": {
+		"bboxCenter": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"bboxSize": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		}
+	},
+	"definitions": {
+		"array": {
+			"type": "array",
+			"items": {"$ref": "#"}
+		},
+		"possibleRef": {
+			"oneOf": [
+				{"$ref": "#"},
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				}
+			]
+		},
+		"possibleRefArray": {
+			"oneOf": [
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/possibleRef"}
+				}
+			]
+		},
+		"bboxCenter": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"bboxSize": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		}
+	},
+	"format": "X3DBoundedObject",
+	"media": {"type": "application/json;profile=X3DBoundedObject"}
+}

@@ -1,0 +1,74 @@
+{
+	"id": "X3DPickableObject.json",
+	"type": "object",
+	"required": [],
+	"properties": {
+		"objectType": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"pickable": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		}
+	},
+	"definitions": {
+		"array": {
+			"type": "array",
+			"items": {"$ref": "#"}
+		},
+		"possibleRef": {
+			"oneOf": [
+				{"$ref": "#"},
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				}
+			]
+		},
+		"possibleRefArray": {
+			"oneOf": [
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/possibleRef"}
+				}
+			]
+		},
+		"objectType": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"pickable": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		}
+	},
+	"format": "X3DPickableObject",
+	"media": {"type": "application/json;profile=X3DPickableObject"}
+}

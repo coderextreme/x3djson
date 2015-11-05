@@ -1,0 +1,172 @@
+{
+	"id": "X3DPickSensorNode.json",
+	"allOf": [
+		{"$ref": "globalAttributes.json"},
+		{"$ref": "DEF_USE.json"},
+		{"$ref": "[object Object].json"},
+		{"$ref": "X3DNode.json"},
+		{"$ref": "X3DChildNode.json"},
+		{"$ref": "X3DSensorNode.json"}
+	],
+	"type": "object",
+	"required": [],
+	"properties": {
+		"DEF": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"USE": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"class": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$NMTOKENS.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$NMTOKENS.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"containerField": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$NMTOKEN.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$NMTOKEN.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"enabled": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"objectType": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"intersectionType": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"sortOrder": {
+			"oneOf": [
+				{"$ref": "#/definitions/sortOrder"},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/sortOrder"},
+					"minItems": 0
+				}
+			]
+		}
+	},
+	"definitions": {
+		"DEF": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"USE": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"array": {
+			"type": "array",
+			"items": {"$ref": "#"}
+		},
+		"class": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"containerField": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"enabled": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"intersectionType": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"objectType": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"possibleRef": {
+			"oneOf": [
+				{"$ref": "#"},
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				}
+			]
+		},
+		"possibleRefArray": {
+			"oneOf": [
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/possibleRef"}
+				}
+			]
+		},
+		"sortOrder": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		}
+	},
+	"format": "X3DPickSensorNode",
+	"media": {"type": "application/json;profile=X3DPickSensorNode"}
+}

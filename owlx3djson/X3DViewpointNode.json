@@ -1,0 +1,172 @@
+{
+	"id": "X3DViewpointNode.json",
+	"allOf": [
+		{"$ref": "globalAttributes.json"},
+		{"$ref": "DEF_USE.json"},
+		{"$ref": "[object Object].json"},
+		{"$ref": "X3DNode.json"},
+		{"$ref": "X3DChildNode.json"},
+		{"$ref": "X3DBindableNode.json"}
+	],
+	"type": "object",
+	"required": [],
+	"properties": {
+		"DEF": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"USE": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"class": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$NMTOKENS.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$NMTOKENS.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"containerField": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$NMTOKEN.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$NMTOKEN.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"description": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"jump": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"orientation": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"retainUserOffsets": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		}
+	},
+	"definitions": {
+		"DEF": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"USE": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"array": {
+			"type": "array",
+			"items": {"$ref": "#"}
+		},
+		"class": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"containerField": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"description": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"jump": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"orientation": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"possibleRef": {
+			"oneOf": [
+				{"$ref": "#"},
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				}
+			]
+		},
+		"possibleRefArray": {
+			"oneOf": [
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/possibleRef"}
+				}
+			]
+		},
+		"retainUserOffsets": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		}
+	},
+	"format": "X3DViewpointNode",
+	"media": {"type": "application/json;profile=X3DViewpointNode"}
+}

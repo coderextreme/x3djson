@@ -1,0 +1,105 @@
+{
+	"id": "X3DColorNode.json",
+	"allOf": [{"$ref": "globalAttributes.json"}, {"$ref": "DEF_USE.json"}, {"$ref": "[object Object].json"}, {"$ref": "X3DNode.json"}, {"$ref": "X3DGeometricPropertyNode.json"}],
+	"type": "object",
+	"required": [],
+	"properties": {
+		"DEF": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"USE": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$string.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"class": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$NMTOKENS.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$NMTOKENS.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		},
+		"containerField": {
+			"oneOf": [
+				{"allOf": [{"$ref": "xsd$NMTOKEN.json#/definitions/possibleRef"}]},
+				{
+					"type": "array",
+					"items": {"allOf": [{"$ref": "xsd$NMTOKEN.json#/definitions/possibleRef"}]},
+					"additionalItems": false
+				}
+			]
+		}
+	},
+	"definitions": {
+		"array": {
+			"type": "array",
+			"items": {"$ref": "#"}
+		},
+		"possibleRef": {
+			"oneOf": [
+				{"$ref": "#"},
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				}
+			]
+		},
+		"possibleRefArray": {
+			"oneOf": [
+				{
+					"type": "string",
+					"format": "uri",
+					"links": [{
+						"rel": "full",
+						"href": "{+$}"
+					}]
+				},
+				{
+					"type": "array",
+					"items": {"$ref": "#/definitions/possibleRef"}
+				}
+			]
+		},
+		"DEF": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"USE": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"class": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		},
+		"containerField": {
+			"title": "",
+			"description": "",
+			"anyOf": []
+		}
+	},
+	"format": "X3DColorNode",
+	"media": {"type": "application/json;profile=X3DColorNode"}
+}
