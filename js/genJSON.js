@@ -1,6 +1,7 @@
 var Jsonix = require('jsonix').Jsonix;
 var x3djson = require('../mappings/x3djson.js').x3djson;
 var fs = require('fs');
+var stylesheet = require('./StyleSheet');
 
 var context = new Jsonix.Context([x3djson]);
 
@@ -14,7 +15,7 @@ function convertToJSON(file) {
 	        if (x3d >= 0) {
 			var jsfile = file.substr(0, x3d)+".output.json";
 			console.log(jsfile);
-			fs.writeFile(jsfile, JSON.stringify(unmarshalled, null, "  "));
+			fs.writeFile(jsfile, JSON.stringify(stylesheet(unmarshalled), null, "  "));
 		}
 	    });
 	} catch (e) {
