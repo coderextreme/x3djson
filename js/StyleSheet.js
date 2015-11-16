@@ -73,7 +73,7 @@ function ConvertJSONToJSON(prototypes, parentobject) {
 					}
 				} else {
 					var obj = ConvertJSONToJSON(prototypes[p]);
-					if (typeof obj['ROUTE'] !== 'undefined') {
+					if (typeof obj !== 'undefined' && typeof obj['ROUTE'] !== 'undefined') {
 						routeArray.push(obj['ROUTE'])
 						if (isArray) {
 							/*
@@ -134,9 +134,11 @@ function ConvertJSONToJSON(prototypes, parentobject) {
 			}
 			object = consolidatedArray;
 		} else {
-			var route = object['ROUTE'];
-			delete object['ROUTE'];
-			object['ROUTE'] = route;
+			if (typeof object !== 'undefined') {
+				var route = object['ROUTE'];
+				delete object['ROUTE'];
+				object['ROUTE'] = route;
+			}
 		}
 	}
 	return object;
