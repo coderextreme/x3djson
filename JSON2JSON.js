@@ -5,7 +5,7 @@ var content = '';
 process.stdin.resume();
 process.stdin.on('data', function(buf) { content += buf.toString(); });
 
-function ConvertJSONToJSON(prototypes) {
+function ConvertJSONToJSON(prototypes, parentobject) {
 	var p;
 	var tag;
 	var object;
@@ -21,11 +21,13 @@ function ConvertJSONToJSON(prototypes) {
 			if (p === "TYPE_NAME") {
 				tag = prototypes[p];
 				tag = tag.substr(8);
-				if (tag !== 'Meta') {
+				if (tag !== 'Meta' && tag != 'Field') {
 					object[tag] = {};
 				}
 			}
 		}
+		var routeArray = [];
+		// var routeIndex = -1;
 		for (p in prototypes) {
  			if (typeof prototypes[p] === 'object') {
 				if (p === 'name') {
@@ -57,10 +59,16 @@ function ConvertJSONToJSON(prototypes) {
 								"head": "head",
 								"scene": "Scene",
 								"appearanceChildContentModel": "-material",
-								"composedGeometryContentModel": "-coord"
+								"composedGeometryContentModel": "-coord",
+								"content": "field",
+								"backgroundOrColorInterpolatorOrCoordinateInterpolator": "-children"
 							}
 							if (typeof mapp[p] !== 'undefined') {
-								object[tag][mapp[p]] = ConvertJSONToJSON(prototypes[p]);
+								object[tag][mapp[p]] = ConvertJSONToJSON(prototypes[p], object[tag]);
+							} else if (p === 'fontStyle') {
+								object[tag]['-fontStyle'] = [ConvertJSONToJSON(prototypes[p])];
+							} else if (p === 'audioClip') {
+								object[tag]['-source'] = [ConvertJSONToJSON(prototypes[p])];
 
 							} else {
 								// this is for attribute names
@@ -68,13 +76,29 @@ function ConvertJSONToJSON(prototypes) {
 							}
 						}
 					}
-					// note that object may be object[tag]
 				} else {
-					object[p] = ConvertJSONToJSON(prototypes[p]);
+					var obj = ConvertJSONToJSON(prototypes[p]);
+					if (typeof obj['ROUTE'] !== 'undefined') {
+						routeArray.push(obj['ROUTE'])
+						if (isArray) {
+							/*
+							if (routeIndex >= 0) {
+								delete object[routeIndex];
+							}
+							routeIndex = p;
+							object[routeIndex] = { 'ROUTE' : routeArray };
+							*/
+							if (typeof parentobject !== 'undefined') {
+								parentobject['ROUTE'] = routeArray;
+							}
+						}
+					} else {
+						object[p] = obj;
+					}
 				}
 			} else if (p !== 'TYPE_NAME') {
 				if (!isArray && typeof tag !== 'undefined') {
-					if (tag === 'Meta') {
+					if (tag === 'Meta' || tag === 'Field') {
 						object['@'+p] = prototypes[p];
 					} else {
 						if (typeof object[tag] === 'undefined') {
@@ -88,14 +112,36 @@ function ConvertJSONToJSON(prototypes) {
 							caps = p;
 						}
 					
-						object[tag]['@'+caps] = prototypes[p];
+						if (typeof prototypes[p] === 'string' && (p === 'url' || p === 'justify' || p === 'string' || p === 'parameter' || p === 'family' || p === 'type')) {
+							object[tag]['@'+caps] = prototypes[p].replace(/^"/, '').replace(/"$/, '').replace(/" "/g,'","').replace(/&/g, '&amp;').split(/","/);
+						} else {
+							object[tag]['@'+caps] = prototypes[p];
+						}
 					}
 				} else {
-					object[p] = prototypes[p];
+					if (typeof prototypes[p] === 'string') {
+						object[p] = prototypes[p].replace(/"/g, '').replace(/&/g, '&amp;');
+					} else {
+						object[p] = prototypes[p];
+					}
 				}
 			} else {
 				// do nothing
 			}
+		}
+		if (isArray) {
+			var np = 0;
+			var consolidatedArray = [];
+			for (p in object) {
+				if (object[p] !== null) {
+					consolidatedArray[np++] = object[p];
+				}
+			}
+			object = consolidatedArray;
+		} else {
+			var route = object['ROUTE'];
+			delete object['ROUTE'];
+			object['ROUTE'] = route;
 		}
 	}
 	return object;
