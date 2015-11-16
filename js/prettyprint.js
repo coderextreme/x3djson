@@ -10,6 +10,7 @@ function parseFile(file) {
 		try {
 			console.log(JSON.stringify(JSON.parse(data), null, "  "));
 		} catch (e) {
+			console.error(e);
 		}
 	});
 }

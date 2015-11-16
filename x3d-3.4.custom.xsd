@@ -269,14 +269,19 @@ X3D Schema version numbering:
 			<xs:appinfo>SFString defines a single string encoded with the UTF-8 universal character set.</xs:appinfo>
 			<xs:documentation source="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFStringAndMFString"/>
 		</xs:annotation>
-		<xs:restriction base="xs:string"/>
+		<xs:restriction base="xs:string">
+		        <xs:pattern value='[^"]*'/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MFString">
 		<xs:annotation>
 			<xs:appinfo>MFString is an array of SFString values, each "quoted" and separated by whitespace.  Array values are optionally separated by commas.</xs:appinfo>
 			<xs:documentation source="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFStringAndMFString"/>
 		</xs:annotation>
-		<xs:list itemType="xs:string"/>
+		<!--xs:list itemType="xs:string"/-->
+		<xs:restriction base="xs:string">
+		        <xs:pattern value='(("[^"]*") ?)*'/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SFTime">
 		<xs:annotation>
