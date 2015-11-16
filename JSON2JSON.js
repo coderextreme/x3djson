@@ -1,4 +1,4 @@
-// Convert my JSONIX JSON format to X3D JSON
+// Convert JSONIX XML to JSON output format to X3D JSON
 
 var content = '';
 // read content into buffer
@@ -53,12 +53,17 @@ function ConvertJSONToJSON(prototypes) {
 							object[tag]['-geometry'] = [ConvertJSONToJSON(prototypes[p][0])];
 							object[tag]['-appearance'] = [ConvertJSONToJSON(prototypes[p][1])];
 						} else {
-							// this is for attribute names
-						        if (p === 'head' || p === 'scene') {
-								object[tag][p] = ConvertJSONToJSON(prototypes[p]);
-							} else if (p === 'appearanceChildContentModel') {
-								object[tag]['-material'] = ConvertJSONToJSON(prototypes[p]);
+							var mapp = {
+								"head": "head",
+								"scene": "Scene",
+								"appearanceChildContentModel": "-material",
+								"composedGeometryContentModel": "-coord"
+							}
+							if (typeof mapp[p] !== 'undefined') {
+								object[tag][mapp[p]] = ConvertJSONToJSON(prototypes[p]);
+
 							} else {
+								// this is for attribute names
 								object[tag]['@'+p] = ConvertJSONToJSON(prototypes[p]);
 							}
 						}
@@ -75,7 +80,15 @@ function ConvertJSONToJSON(prototypes) {
 						if (typeof object[tag] === 'undefined') {
 							object[tag] = {};
 						}
-						object[tag]['@'+p] = prototypes[p];
+						if (p === 'def') {
+							caps = "DEF";
+						} else if (p === 'use') {
+							caps = "USE";
+						} else {
+							caps = p;
+						}
+					
+						object[tag]['@'+caps] = prototypes[p];
 					}
 				} else {
 					object[p] = prototypes[p];
