@@ -23,6 +23,8 @@
     "gen": "node js/genJSON.js Dodecahedron.x3d ObliqueStrategies.x3d HelloWorld.x3d Box.x3d; node js/marshal.js Dodecahedron.output.json ObliqueStrategies.output.json HelloWorld.output.json Box.output.json",
     "app": "node app.js",
     "validate": "node js/validatex3djson.js",
-    "print": "node js/prettyprint.js HelloWorld.json"
+    "print": "node js/prettyprint.js HelloWorld.json",
+    "xjc": "xjc -d . -p x3djson x3d-3.4.xsd x3d-3.4-Web3dExtensionsP* -b bindings.xjb",
+    "rng": "xjc -d . -p xmlrng -extension -relaxng xmlschema.rng; xjc -d . -p x3drng -extension -relaxng x3d-3.4.rng"
   }
 }
