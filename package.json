@@ -18,6 +18,7 @@
     "mpath": ">=0.5.1",
     "bl": ">=2.2.1",
     "kerberos": ">=1.0.0",
+    "ms": ">0.7.0",
     "xmlhttprequest": "*"
   },
   "scripts": {
