@@ -8,12 +8,12 @@
   "dependencies": {
     "ajv": "*",
     "express": "*",
-    "json-schema-to-mongoose": "*",
+    "json-schema-to-mongoose": "0.2.2",
     "jsonix": "*",
     "jsonix-schema-compiler": "*",
-    "lodash": "*",
-    "mongodb": "*",
-    "mongoose": "*",
+    "lodash": ">=4.17.19",
+    "mongodb": ">=3.1.13",
+    "mongoose": ">=4.3.6",
     "xmldom": "*",
     "xmlhttprequest": "*"
   },
