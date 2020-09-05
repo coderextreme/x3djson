@@ -15,6 +15,9 @@
     "mongodb": ">=3.1.13",
     "mongoose": ">=4.3.6",
     "xmldom": "*",
+    "mpath": ">=0.5.1",
+    "bl": ">=2.2.1",
+    "kerberos": ">=1.0.0",
     "xmlhttprequest": "*"
   },
   "scripts": {
